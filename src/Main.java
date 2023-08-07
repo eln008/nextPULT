@@ -115,7 +115,7 @@ public class Main {
                     count = 1;
                 }
                 System.out.println(indeksKan[count]);
-            } else {
+            }else {
                 System.out.println("Ошибка: Неверный ввод");
             }
 
