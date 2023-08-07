@@ -109,46 +109,52 @@ public class Main {
                 }
             } else if(mainMenu.equals("off")){
             System.exit(0);
-                } else System.out.println(" Error ");
+                } else if (mainMenu.equals("next")) {
+                count++;
+                if (count >= indeksKan.length) {
+                    count = 1;
+                }
+                System.out.println(indeksKan[count]);
+            } else {
+                System.out.println("Ошибка: Неверный ввод");
+            }
 
 
             String mainNum = scan.next();
-             if (mainNum.equals(1) ) {
+             if (mainNum.equals("1")) {
             System.out.println(indeksKan[1]);
             count = 1;
-            }else if (mainNum.equals(2)) {
+            }else if (mainNum.equals("2")) {
                     System.out.println(indeksKan[2]);
                     count = 2;
-            }else if (mainNum.equals(3)) {
+            }else if (mainNum.equals("3")) {
                 System.out.println(indeksKan[3]);
                 count = 3;
-            }else if (mainNum.equals(4)) {
+            }else if (mainNum.equals("4")) {
                 System.out.println(indeksKan[4]);
                 count = 4;
-            }else if (mainNum.equals(5)) {
+            }else if (mainNum.equals("5")) {
                 System.out.println(indeksKan[5]);
                 count = 5;
-            }else if (mainNum.equals(6)) {
+            }else if (mainNum.equals("6")) {
                 System.out.println(indeksKan[6]);
                 count = 6;
-            }else if (mainNum.equals(7)) {
+            }else if (mainNum.equals("7")) {
                 System.out.println(indeksKan[7]);
                 count = 7;
-            }else if (mainNum.equals(8)) {
+            }else if (mainNum.equals("8")) {
                 System.out.println(indeksKan[8]);
 
             }else if (mainNum.equals("next")) {
-                count = (count + 1) % indeksKan.length;
-                System.out.println("Switching to channel: " + indeksKan[count]);
-                method();
+                 count++;
+                 if (count >= indeksKan.length) {
+                     count = 1;
+                 }
+                 System.out.println(indeksKan[count]);
+             } else {
+                 System.out.println("Ошибка: Неверный ввод");
              }
-
-
        return method();
-
-
-
-
     }
 }
 
